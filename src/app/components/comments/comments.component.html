@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="text-center">Comentarios</h5>
+  </div>
+  <div class="card-body">
+    <div class="container" *ngFor="let comment of comments">
+      <h5 class="card-title">Nombre: {{ comment.name }}</h5>
+      <p class="card-text">Comentario: {{ comment.body }}</p>
+    </div>
+    <div class="text-center mt-3">
+      <button class="btn btn-dark" (click)="getDate()">Emitir</button>
+    </div>
+  </div>
+</div>

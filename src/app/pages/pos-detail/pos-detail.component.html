@@ -1,0 +1,13 @@
+<div class="container" *ngIf="!post">
+  <p class="text-center">Cargando.....</p>
+</div>
+
+<div class="container" *ngIf="post">
+  <div class="flex">
+    <h5>Detalles del post: {{ post.id }}</h5>
+    <h5>Ultimo Comentario: {{ lastDate }}</h5>
+  </div>
+  <p>{{ post.body }}</p>
+
+  <app-comments [postId]="id" (LastDate)="getDate($event)"></app-comments>
+</div>

@@ -1,0 +1,22 @@
+<div class="container" *ngIf="!posts">
+  <p class="text-center">Cargando.....</p>
+</div>
+
+<table class="table table-bordered" *ngIf="posts.length > 0">
+  <thead>
+    <tr>
+      <th class="text-center" scope="col">Id</th>
+      <th scope="col">Posts</th>
+      <th class="text-center" scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <th class="text-center">{{ post.id }}</th>
+      <th>{{ post.title }}</th>
+      <th class="text-center">
+        <a (click)="postDetail(post.id)" class="cursor">Ver</a>
+      </th>
+    </tr>
+  </tbody>
+</table>
